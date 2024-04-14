@@ -60,8 +60,8 @@ const Form = () => {
             <p>
                <label>
                   <span className="form__label">Przelicz z:</span>
-                  <select className="form__input" disabled>
-                     <option value="pln" selected>Złoty (PLN)</option>
+                  <select className="form__input" disabled defaultValue="pln">
+                     <option value="pln">Złoty (PLN)</option>
                   </select>
                </label>
             </p>
@@ -101,7 +101,7 @@ const Form = () => {
             <p>
                <span className="form__label">Kwota po przeliczeniu:</span>
                <input
-                  value={result.finalAmount}
+                  value={result && result.finalAmount}
                   className="form__input form__input-readonly"
                   readOnly
                />
