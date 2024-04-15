@@ -1,4 +1,41 @@
-# Getting Started with Create React App
+# Currency Converter in React.js
+
+This project is created in connection with the programming course at YouCode.pl school. Currency Converter is a web application built with React that allows users to convert currency values between different currencies. It provides real-time exchange rates and supports various currencies such as USD, EUR, GBP, and more.
+
+## Features
+
+- Convert currency values between PLN and selected currency
+- Supports a wide range of currencies
+- Simple and intuitive user interface
+
+## How to use
+
+- Select the currency you want to convert from (only PLN at the moment).
+- Choose the currency you want to convert to.
+- Enter the amount you want to convert.
+- Click the "Convert" button
+- Instantly see the converted amount.
+
+## Link
+
+[Currency converter in React.js](https://pawel-czwarno.github.io/currency-converter-react/)
+
+## Author
+
+[Paweł Czwarno](https://github.com/Pawel-Czwarno)
+
+![Paweł Czwarno](https://github.com/Pawel-Czwarno/homepage/blob/main/images/PC.jpg?raw=true)
+
+## Features
+
+- HTML forms
+- CSS
+- CSS - Media queries
+- BEM methodology
+- JS functions
+- React.js
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
