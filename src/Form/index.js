@@ -53,21 +53,20 @@ const Form = () => {
          className="form"
          onSubmit={onSubmit}
          result={result}
-         calculateResult={calculateResult}
       >
          <fieldset className="form__fieldset">
             <legend className="form__legend">Wybierz parę walutową</legend>
             <p>
-               <label>
-                  <span className="form__label">Przelicz z:</span>
+               <label className="form__flex">
+                  <span>Przelicz z:</span>
                   <select className="form__input" disabled defaultValue="pln">
                      <option value="pln">Złoty (PLN)</option>
                   </select>
                </label>
             </p>
             <p>
-               <label>
-                  <span className="form__label">Przelicz na:</span>
+               <label className="form__flex">
+                  <span>Przelicz na:</span>
                   <select
                      className="form__input"
                      value={currency}
@@ -87,8 +86,8 @@ const Form = () => {
          </fieldset>
          <fieldset className="form__fieldset">
             <legend className="form__legend">Wpisz kwotę i otrzymaj wynik</legend>
-            <p>
-               <span className="form__label">Wpisz kwotę do przeliczenia*:</span>
+            <p className="form__flex">
+               <span>Wpisz kwotę do przeliczenia*:</span>
                <input
                   value={amount}
                   onChange={({ target }) => setAmount(target.value)}
@@ -98,10 +97,10 @@ const Form = () => {
                   required
                />
             </p>
-            <p>
-               <span className="form__label">Kwota po przeliczeniu:</span>
+            <p className="form__flex">
+               <span>Kwota po przeliczeniu:</span>
                <input
-                  value={result && result.finalAmount}
+                  value={result ? result.finalAmount : ''}
                   className="form__input form__input-readonly"
                   readOnly
                />
