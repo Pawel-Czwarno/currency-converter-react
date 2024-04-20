@@ -8,11 +8,9 @@ function App() {
   return (
     <Main>
       <Header title="KALKULATOR WALUTOWY" />
-      <Section
-        form={
-          <Form />
-        }
-      />
+      <Section>
+        <Form />
+      </Section>
       <Footer />
     </Main>
   );
