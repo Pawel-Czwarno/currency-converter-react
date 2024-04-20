@@ -2,7 +2,7 @@ import "./style.css";
 
 const Footer = () => (
     <footer className="footer">
-        <p className="footer__element">© Paweł Czwarno 2023</p>
+        <p className="footer__paragraph">© Paweł Czwarno 2023</p>
         <p>
             <a className="footer__link" href="mailto:pawel.czwarno@gmail.com">
                 Napisz do mnie
