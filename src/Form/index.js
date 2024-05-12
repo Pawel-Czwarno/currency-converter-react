@@ -68,6 +68,7 @@ const Form = () => {
                   type="number"
                   className="form__input"
                   step="0.01"
+                  min="0"
                   required
                />
             </p>
