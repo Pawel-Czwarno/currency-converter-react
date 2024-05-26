@@ -1,9 +1,15 @@
-import "./style.css";
+import styled from "styled-components";
+
+const StyledMain = styled.main`
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+`;
 
 const Main = ({ children }) => (
-    <main className="main">
+    <StyledMain>
         {children}
-    </main>
+    </StyledMain>
 );
 
 export default Main;
