@@ -1,20 +1,20 @@
-import "./style.css";
+import { StyledSection, Title, Legend } from "./styled";
 
 const Section = ({ children }) => (
-    <section className="section">
+    <StyledSection>
         <div>
             {children[0]}
         </div>
-        <h2 className="section__title">
+        <Title>
             Wybierz parę walutową, wpisz kwotę i przelicz wartość
-        </h2>
-        <p className="section__legend">
+        </Title>
+        <Legend>
             Kalkulator walutowy jest zgodny z kursem walut z dnia 10 kwietnia 2024 r.
-        </p>
+        </Legend>
         <div>
             {children[1]}
         </div>
-    </section>
+    </StyledSection>
 );
 
 export default Section;
