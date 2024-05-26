@@ -1,19 +1,19 @@
-import "./style.css";
+import { StyledFooter, Paragraph, Link } from "./styled";
 
 const Footer = () => (
-    <footer className="footer">
-        <p className="footer__paragraph">© Paweł Czwarno 2023</p>
+    <StyledFooter>
+        <Paragraph>© Paweł Czwarno 2023</Paragraph>
         <p>
-            <a className="footer__link" href="mailto:pawel.czwarno@gmail.com">
+            <Link href="mailto:pawel.czwarno@gmail.com">
                 Napisz do mnie
-            </a>
+            </Link>
         </p>
         <p>
             <a href="https://github.com/Pawel-Czwarno" rel="noreferrer noopener" target="_blank">
-                <img className="footer__link footer__link--git" src="/github.png" alt="Github_icon"/>
+                <Link as="img" git src="/github.png" alt="Github_icon" />
             </a>
         </p>
-    </footer>
+    </StyledFooter>
 );
 
 export default Footer;

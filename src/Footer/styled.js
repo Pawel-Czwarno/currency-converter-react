@@ -1,4 +1,6 @@
-.footer {
+import styled, { css } from "styled-components";
+
+export const StyledFooter = styled.footer`
     background-color: #eee;
     font-size: 15px;
     color: #128b12;
@@ -10,32 +12,30 @@
     align-items: center;
     letter-spacing: 0.2em;
     box-shadow: 0px 0px 5px 1px #9c9c9c;
-}
 
 @media (max-width: 767px) {
-    .footer {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     }
-}
+`;
 
-.footer__paragraph {
+export const Paragraph = styled.p`
     border-left: 1px solid #128b12;
     padding-left: 10px;
-}
+`;
 
-.footer__link {
+export const Link = styled.a`
     color: #128b12;
     text-decoration: none;
     cursor: pointer;
     border-left: 1px solid #128b12;
     padding-left: 10px;
-}
 
-.footer__link:hover {
-    border-bottom: 1px solid #128b12;
-}
+    &:hover {
+        border-bottom: 1px solid #128b12;
+    }
 
-.footer__link--git {
-    max-width: 30px;
-    max-height: 30px;
-}
+    ${({ git }) => git && css`
+        max-width: 30px;
+        max-height: 30px;
+    `}
+`;
