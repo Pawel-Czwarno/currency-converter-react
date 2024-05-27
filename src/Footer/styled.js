@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
     padding-left: 10px;
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
     color: #128b12;
     text-decoration: none;
     cursor: pointer;
@@ -34,7 +34,7 @@ export const Link = styled.a`
         border-bottom: 1px solid #128b12;
     }
 
-    ${({ git }) => git && css`
+    ${({ picture }) => picture && css`
         max-width: 30px;
         max-height: 30px;
     `}

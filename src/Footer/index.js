@@ -1,16 +1,21 @@
-import { StyledFooter, Paragraph, Link } from "./styled";
+import { StyledFooter, Paragraph, StyledLink } from "./styled";
 
-const Footer = () => (
+const Footer = ({ picture }) => (
     <StyledFooter>
         <Paragraph>© Paweł Czwarno 2023</Paragraph>
         <p>
-            <Link href="mailto:pawel.czwarno@gmail.com">
+            <StyledLink href="mailto:pawel.czwarno@gmail.com">
                 Napisz do mnie
-            </Link>
+            </StyledLink>
         </p>
         <p>
             <a href="https://github.com/Pawel-Czwarno" rel="noreferrer noopener" target="_blank">
-                <Link as="img" git src="/github.png" alt="Github_icon" />
+                <StyledLink
+                    as="img"
+                    $picture={picture}
+                    src="/github.png"
+                    alt="Github_icon"
+                />
             </a>
         </p>
     </StyledFooter>
