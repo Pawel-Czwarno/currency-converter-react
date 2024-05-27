@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./style.css";
 import { currencies } from "./currencies";
+import { StyledForm, Legend, Fieldset, Flex, Input, Button } from "./styled";
 
 const Form = () => {
    const [currency, setCurrency] = useState(currencies[0].index);
@@ -23,26 +23,24 @@ const Form = () => {
    };
 
    return (
-      <form
-         className="form"
+      <StyledForm
          onSubmit={onSubmit}
          result={result}
       >
-         <fieldset className="form__fieldset">
-            <legend className="form__legend">Wybierz parę walutową</legend>
+         <Fieldset>
+            <Legend>Wybierz parę walutową</Legend>
             <p>
-               <label className="form__flex">
+               <Flex>
                   <span>Przelicz z:</span>
-                  <select className="form__input" disabled defaultValue="pln">
+                  <Input disabled defaultValue="pln">
                      <option value="pln">Złoty (PLN)</option>
-                  </select>
-               </label>
+                  </Input>
+               </Flex>
             </p>
             <p>
-               <label className="form__flex">
+               <Flex>
                   <span>Przelicz na:</span>
-                  <select
-                     className="form__input"
+                  <Input
                      value={currency}
                      onChange={({ target }) => setCurrency(target.value)}
                   >
@@ -54,37 +52,37 @@ const Form = () => {
                            {currency.name}
                         </option>
                      )))}
-                  </select>
-               </label>
+                  </Input>
+               </Flex>
             </p>
-         </fieldset>
-         <fieldset className="form__fieldset">
-            <legend className="form__legend">Wpisz kwotę i otrzymaj wynik</legend>
-            <p className="form__flex">
+         </Fieldset>
+         <Fieldset>
+            <Legend>Wpisz kwotę i otrzymaj wynik</Legend>
+            <Flex as="p">
                <span>Wpisz kwotę do przeliczenia*:</span>
-               <input
+               <Input
+                  as="input"
                   value={amount}
                   onChange={({ target }) => setAmount(target.value)}
                   type="number"
-                  className="form__input"
                   step="0.01"
                   min="0"
                   required
                />
-            </p>
-            <p className="form__flex">
+            </Flex>
+            <Flex as="p">
                <span>Kwota po przeliczeniu:</span>
-               <input
+               <Input
+                  as="input"
                   value={result ? result.finalAmount : ''}
-                  className="form__input form__input-readonly"
                   readOnly
                />
-            </p>
-         </fieldset>
+            </Flex>
+         </Fieldset>
          <p>
-            <button className="form__button">Przelicz</button>
+            <Button>Przelicz</Button>
          </p>
-      </form>
+      </StyledForm>
    );
 };
 
