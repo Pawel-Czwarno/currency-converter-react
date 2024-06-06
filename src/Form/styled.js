@@ -3,18 +3,18 @@ import styled, { css } from "styled-components";
 export const StyledForm = styled.form`
     text-align: center;
 
-@media (max-width: 767px) {
+    @media (max-width: 767px) {
         overflow: auto;
     }
 
-@media (max-width: 400px) {
-    fieldset {
-        margin: 5px;
+    @media (max-width: 400px) {
+        fieldset {
+            margin: 5px;
         }
 
-    input {
-        width: 100px;
-        padding: 5px;
+        input {
+            width: 100px;
+            padding: 5px;
         }
     }
 `;

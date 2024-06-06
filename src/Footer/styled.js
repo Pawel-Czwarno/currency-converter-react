@@ -13,8 +13,8 @@ export const StyledFooter = styled.footer`
     letter-spacing: 0.2em;
     box-shadow: 0px 0px 5px 1px #9c9c9c;
 
-@media (max-width: 767px) {
-    flex-wrap: wrap;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
     }
 `;
 
