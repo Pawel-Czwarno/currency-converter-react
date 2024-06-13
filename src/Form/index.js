@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { currencies } from "./currencies";
-import { StyledForm, Legend, Fieldset, Flex, Input, Button } from "./styled";
+import { StyledForm, Legend, Fieldset, Container, Input, Button } from "./styled";
 
 const Form = () => {
    const [currency, setCurrency] = useState(currencies[0].index);
@@ -30,15 +30,15 @@ const Form = () => {
          <Fieldset>
             <Legend>Wybierz parę walutową</Legend>
             <p>
-               <Flex>
+               <Container>
                   <span>Przelicz z:</span>
                   <Input disabled defaultValue="pln">
                      <option value="pln">Złoty (PLN)</option>
                   </Input>
-               </Flex>
+               </Container>
             </p>
             <p>
-               <Flex>
+               <Container>
                   <span>Przelicz na:</span>
                   <Input
                      value={currency}
@@ -53,12 +53,12 @@ const Form = () => {
                         </option>
                      )))}
                   </Input>
-               </Flex>
+               </Container>
             </p>
          </Fieldset>
          <Fieldset>
             <Legend>Wpisz kwotę i otrzymaj wynik</Legend>
-            <Flex as="p">
+            <Container as="p">
                <span>Wpisz kwotę do przeliczenia*:</span>
                <Input
                   as="input"
@@ -69,15 +69,15 @@ const Form = () => {
                   min="0"
                   required
                />
-            </Flex>
-            <Flex as="p">
+            </Container>
+            <Container as="p">
                <span>Kwota po przeliczeniu:</span>
                <Input
                   as="input"
                   value={result ? result.finalAmount : ''}
                   readOnly
                />
-            </Flex>
+            </Container>
          </Fieldset>
          <p>
             <Button>Przelicz</Button>

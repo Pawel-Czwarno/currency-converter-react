@@ -43,7 +43,7 @@ export const Fieldset = styled.fieldset`
     }
 `;
 
-export const Flex = styled.label`
+export const Container = styled.label`
     display: flex;
     justify-content: space-between;
     align-items: center;

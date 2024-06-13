@@ -1,7 +1,7 @@
 import useCurrentDate from "./useCurrentDate";
 import styled from "styled-components";
 
-const Component = styled.p`
+const StyledDate = styled.p`
     text-align: end;
     padding-right: 20px;
     font-size: 10px;
@@ -12,14 +12,14 @@ const DateComponent = () => {
     const currentTime = useCurrentDate();
 
     return (
-        <Component>
+        <StyledDate>
             Dzisiaj jest {currentTime.toLocaleString(
                 "pl", {
                 weekday: "long", day: "numeric", month: "long",
                 hour: "numeric", minute: "numeric", second: "numeric"
             }
             )}
-        </Component>
+        </StyledDate>
     );
 };
 
