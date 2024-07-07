@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: content-box;
     }
@@ -18,5 +18,3 @@ const GlobalStyle = createGlobalStyle`
         background-position: center;
     }
 `;
-
-export default GlobalStyle;
